@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: BS_SAAS_GATEWAY
+    name: SPRING_GATEWAY_PLAY
 #  config:
 #    import: aws-secretsmanager:play/gateway/common
   http:
