@@ -26,3 +26,22 @@ spring:
               eviction-interval: 120s
               leasing-strategy: lifo
               name: my-provider
+
+logging:
+  level:
+    root: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [${spring.application.name:}, traceId:%X{traceId:-}, spanId:%X{spanId:-}] %-5level [%thread] %logger{36} - %msg%n"
+
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    use-root-path: true
+    path: /index.html
+    urls:
+      - url: /kotlin-play/api-docs
+        name: Kotlin Play Service
