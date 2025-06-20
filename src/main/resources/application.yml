@@ -6,6 +6,8 @@ server:
 spring:
   application:
     name: spring-gateway-play
+  config:
+    import: configserver:http://localhost:8888
 #  http:
 #    codecs:
 #      max-in-memory-size: 10MB
