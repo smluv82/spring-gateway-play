@@ -28,6 +28,7 @@ val kotlinLoggingVersion by extra("3.0.5")
 
 dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-gateway-server-webflux")
+    implementation("org.springframework.cloud:spring-cloud-config-client")
 
     //kotlin
     implementation("org.jetbrains.kotlin:kotlin-reflect")

@@ -5,43 +5,41 @@ server:
 
 spring:
   application:
-    name: SPRING_GATEWAY_PLAY
-#  config:
-#    import: aws-secretsmanager:play/gateway/common
-  http:
-    codecs:
-      max-in-memory-size: 10MB
-  cloud:
-    gateway:
-      server:
-        webflux:
-          httpclient:
-            connect-timeout: 100000 #ms
-            response-timeout: 100s
-            pool:
-              type: fixed
-              max-connections: 100
-              max-idle-time: 240s
-              max-life-time: 3600s
-              eviction-interval: 120s
-              leasing-strategy: lifo
-              name: my-provider
-
-logging:
-  level:
-    root: INFO
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} [${spring.application.name:}, traceId:%X{traceId:-}, spanId:%X{spanId:-}] %-5level [%thread] %logger{36} - %msg%n"
-
-
-springdoc:
-  api-docs:
-    enabled: true
-    path: /api-docs
-  swagger-ui:
-    enabled: true
-    use-root-path: true
-    path: /index.html
-    urls:
-      - url: /kotlin-play/api-docs
-        name: Kotlin Play Service
+    name: spring-gateway-play
+#  http:
+#    codecs:
+#      max-in-memory-size: 10MB
+#  cloud:
+#    gateway:
+#      server:
+#        webflux:
+#          httpclient:
+#            connect-timeout: 100000 #ms
+#            response-timeout: 100s
+#            pool:
+#              type: fixed
+#              max-connections: 100
+#              max-idle-time: 240s
+#              max-life-time: 3600s
+#              eviction-interval: 120s
+#              leasing-strategy: lifo
+#              name: my-provider
+#
+#logging:
+#  level:
+#    root: INFO
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss} [${spring.application.name:}, traceId:%X{traceId:-}, spanId:%X{spanId:-}] %-5level [%thread] %logger{36} - %msg%n"
+#
+#
+#springdoc:
+#  api-docs:
+#    enabled: true
+#    path: /api-docs
+#  swagger-ui:
+#    enabled: true
+#    use-root-path: true
+#    path: /index.html
+#    urls:
+#      - url: /kotlin-play/api-docs
+#        name: Kotlin Play Service
