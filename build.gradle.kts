@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.9.25"
     kotlin("plugin.spring") version "1.9.25"
-    id("org.springframework.boot") version "3.5.2"
+    id("org.springframework.boot") version "3.4.5"
     id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -20,14 +20,14 @@ repositories {
     mavenCentral()
 }
 
-extra["springCloudVersion"] = "2025.0.0"
+extra["springCloudVersion"] = "2024.0.1"
 val httpclientVersion by extra("5.4.4")
 val micrometerVersion by extra("1.4.5")
 val swaggerVersion by extra("2.8.6")
 val kotlinLoggingVersion by extra("3.0.5")
 
 dependencies {
-    implementation("org.springframework.cloud:spring-cloud-starter-gateway-server-webflux")
+    implementation("org.springframework.cloud:spring-cloud-starter-gateway")
     implementation("org.springframework.cloud:spring-cloud-config-client")
 
     //kotlin
